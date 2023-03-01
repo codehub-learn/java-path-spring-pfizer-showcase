@@ -15,6 +15,10 @@ public class MessageSenderRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        rabbitTemplate.convertAndSend("testing.queue", "Hello. Application initialized.");
+//        rabbitTemplate.convertAndSend("testing.queue", "Hello. Application initialized.");
+//        rabbitTemplate.convertAndSend("testing.queue", "Hello. Application initialized.");
+//        rabbitTemplate.convertAndSend("testing.queue", "Hello. Application initialized.");
+//        rabbitTemplate.convertAndSend("testing.queue", "Hello. Application initialized.");
+        rabbitTemplate.convertAndSend("fanout.exchange.custom", "", "Hello. Application initialized.");
     }
 }
